@@ -7,6 +7,8 @@ import { ModalAgendamentoComponent } from './components/modal-agendamento/modal-
 import { BtnConfirmaPagamentoComponent } from './components/btn-confirma-pagamento/btn-confirma-pagamento.component';
 import { InfoAgendamentoComponent } from './components/info-agendamento/info-agendamento.component';
 import { TelaDeLoginComponent } from './components/tela-de-login/tela-de-login.component';
+import { HeaderComponent } from './components/header/header.component';
+
 import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-form.component'
 
 @NgModule({
@@ -14,6 +16,7 @@ import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-
     AppComponent,
     ModalAgendamentoComponent,
     BtnConfirmaPagamentoComponent,
+    HeaderComponent,
     InfoAgendamentoComponent,
     TelaDeLoginComponent,
     BtnInputsFormComponent
