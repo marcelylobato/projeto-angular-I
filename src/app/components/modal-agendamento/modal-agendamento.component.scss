@@ -1,0 +1,18 @@
+.modal {
+    margin: auto;
+    border: none;
+    &__titulo {
+        text-align: center;
+        font-size: 1rem;
+    }
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    &__info-dado {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
