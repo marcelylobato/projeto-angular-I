@@ -9,6 +9,7 @@ import { InfoAgendamentoComponent } from './components/info-agendamento/info-age
 import { TelaDeLoginComponent } from './components/tela-de-login/tela-de-login.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-form.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
     BtnConfirmaPagamentoComponent,
     HeaderComponent,
     InfoAgendamentoComponent,
-    TelaDeLoginComponent
+    TelaDeLoginComponent,
+    BtnInputsFormComponent
   ],
   imports: [
     BrowserModule,
