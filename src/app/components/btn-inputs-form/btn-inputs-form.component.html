@@ -1,32 +1,43 @@
-<form action="" method="get">
 
+<section class="section-form">  
+    <form action="" method="get" id="form-select">
+        
         <!-- Input de seleção de serviços -->
-        <label for="service"> Selecione qual serviço deseja contratar </label>
-        <select type="select" id="service">
-            <option value="corte" selected>Corte de cabelo - R$50,00</option>
-            <option value="coloracao">Coloração e Mechas - R$150,00</option>
-            <option value="manicure-pedicure">Manicure e Pedicure - R$40,00</option>
-            <option value="penteados">Escova e Penteados - R$80,00</option>
-            <option value="maquiagem">Maquiagem - R$100,00</option>
-            <option value="tratamento">Tratamento Capilar - R$120,00</option>
-            <option value="depilacao">Depilação - R$70,00</option>
-        </select>
-
+        <fieldset class="style-forms">         
+            <label for="service"> Selecione qual serviço deseja contratar </label>
+            <select type="select" id="service">
+                <option value="corte" selected>Corte de cabelo - R$50,00</option>
+                <option value="coloracao">Coloração e Mechas - R$150,00</option>
+                <option value="manicure-pedicure">Manicure e Pedicure - R$40,00</option>
+                <option value="penteados">Escova e Penteados - R$80,00</option>
+                <option value="maquiagem">Maquiagem - R$100,00</option>
+                <option value="tratamento">Tratamento Capilar - R$120,00</option>
+                <option value="depilacao">Depilação - R$70,00</option>
+            </select>
+        </fieldset>
+        
         <!-- Input de seleção de data para o atendimento -->
-        <label for="data"> Selecione o melhor dia para atendimento </label>
-        <input type="date" id="data">
-
+        <fieldset class="style-forms">
+            <label for="data"> Selecione o melhor dia para atendimento </label>
+            <input type="date" id="data">
+         </fieldset>
+        
         <!-- Input de seleção para escolher o horario do atendimento -->
-        <label for="hour"> Selecione o melhor horário </label>
-        <input type="time" id="hour" min="08:00" max="18:00" step="1800">
-
+        <fieldset class="style-forms">
+            <label for="hour"> Selecione o melhor horário </label>
+            <input type="time" id="hour" min="08:00" max="18:00" step="1800">
+        </fieldset>
+        
         <!-- Input para escolher qual profissional irá realizar o atendimento -->
-        <label for="professional"> Selecione o profissional de sua preferência </label>
-        <select type="select" id="professional">
-            <option value="cezaniltom"> Cezaniltom </option>
-            <option value="daniel"> Daniel </option>
-            <option value="felipe"> Felipe </option>
-            <option value="marcely" selected> Marcely </option>
-            <option value="natalia"> Natalia </option>
-        </select>
-</form>
+        <fieldset class="style-forms">
+            <label for="professional"> Selecione o profissional de sua preferência </label>
+            <select type="select" id="professional">
+                <option value="cezaniltom"> Cezaniltom </option>
+                <option value="daniel"> Daniel </option>
+                <option value="felipe"> Felipe </option>
+                <option value="marcely" selected> Marcely </option>
+                <option value="natalia"> Natalia </option>
+            </select>
+        </fieldset>
+    </form>
+</section>
