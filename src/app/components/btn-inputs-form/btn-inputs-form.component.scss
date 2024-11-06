@@ -23,12 +23,18 @@
         .style-forms {
             display: flex;
             justify-content: space-between;
-            padding: 1.6rem;
+            padding: 1.2rem;
             margin-bottom: 10px;
             border: none;
             border-radius: 1rem;
-            background-color: var.$Rosa-avermelhado;
-            color: var.$Branco;
+            background-color: var.$Branco;
+            color: var.$Rosa-avermelhado;
+            border: 0.1em solid var.$Rosa-avermelhado;
+
+            input, select {
+                color: var.$Rosa-avermelhado;
+                border: 1px solid var.$Rosa-avermelhado;
+            }
         }
     }
 }
