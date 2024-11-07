@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './btn-inputs-form.component.scss'
 })
 export class BtnInputsFormComponent {
-
+  
 }

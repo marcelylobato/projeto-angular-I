@@ -11,29 +11,36 @@
 
 
     #form-select {
-        width: 50%;
-        height: 70%;
+        width: 60%;
+        height: 28rem;
         display: flex;
         background-color: var.$Azul-escuro;
         flex-direction: column;
         justify-content: center;
-        padding: 1rem;
+        padding: 0.6rem;
         border-radius: 2rem;
 
         .style-forms {
             display: flex;
             justify-content: space-between;
-            padding: 1.2rem;
-            margin-bottom: 10px;
+            align-items: center;
+            padding: 0.8rem;
+            margin: 12px 0;
             border: none;
             border-radius: 1rem;
             background-color: var.$Branco;
             color: var.$Rosa-avermelhado;
-            border: 0.1em solid var.$Rosa-avermelhado;
 
-            input, select {
-                color: var.$Rosa-avermelhado;
-                border: 1px solid var.$Rosa-avermelhado;
+            input, select {            
+                display: flex;
+                width: 200px;
+                height: 40px;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            input:focus, select:focus{
+                outline: 2px solid var.$Rosa-avermelhado;
             }
         }
     }
