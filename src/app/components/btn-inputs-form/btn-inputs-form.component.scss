@@ -1,1 +1,40 @@
 @use "../../scss/variables" as var;
+
+.section-form {
+    color: var.$Branco;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+
+    #form-select {
+        width: 50%;
+        height: 70%;
+        display: flex;
+        background-color: var.$Azul-escuro;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 2rem;
+
+        .style-forms {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 1rem;
+            background-color: var.$Branco;
+            color: var.$Rosa-avermelhado;
+            border: 0.1em solid var.$Rosa-avermelhado;
+
+            input, select {
+                color: var.$Rosa-avermelhado;
+                border: 1px solid var.$Rosa-avermelhado;
+            }
+        }
+    }
+}
