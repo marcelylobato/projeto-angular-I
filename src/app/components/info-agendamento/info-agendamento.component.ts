@@ -2,8 +2,6 @@
 import { Component, Input } from '@angular/core';
 import { DadosInfo } from '../../Interface/DadosInfo.interface';
 
-import { Component } from '@angular/core';
-
 
 @Component({
   selector: 'app-info-agendamento',
@@ -12,10 +10,7 @@ import { Component } from '@angular/core';
 })
 export class InfoAgendamentoComponent {
 
-}
-
-
-  @Input() nomes: DadosInfo[] = []; 
+@Input() nomes: DadosInfo[] = []; 
 }
 
 

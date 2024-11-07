@@ -2,16 +2,15 @@
 <span>Verifique as informações do agendamento.</span>
 
 <div>
-   <p>Data:</p>
-   <p>Horário:</p>
-   <p>Serviço:</p>
-   <p>Profissional: </p>
-   <p>Valor: </p>
+  <p>Data:</p>
+  <p>Horário:</p>
+  <p>Serviço:</p>
+  <p>Profissional:</p>
+  <p>Valor:</p>
 </div>
 
 <button>Cancelar</button>
 <button>Ir para pagamento</button>
-
 
 <table class="agendamentos">
   <thead>
@@ -25,17 +24,14 @@
     </tr>
   </thead>
 
-
   <tbody>
     <tr *ngFor="let info of nomes">
       <td>{{ info.id }}</td>
       <td>{{ info.nome }}</td>
-      <td>{{ info.data  }}</td>
+      <td>{{ info.data }}</td>
       <td>{{ info.servico }}</td>
       <td>{{ info.horario }}</td>
-      <td>R$ {{ info.valor | number:'1.2-2' }}</td>
+      <td>R$ {{ info.valor | number : "1.2-2" }}</td>
     </tr>
   </tbody>
-  
 </table>
-</div>
