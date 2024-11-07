@@ -1,0 +1,34 @@
+@use "../../scss/variables" as var;
+
+.header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem 0;
+        color: var.$Branco;
+    }
+    &__greeting-message {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &__logout-btn {
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        background-color: var.$Rosa-avermelhado;
+        color: var.$Branco;
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
