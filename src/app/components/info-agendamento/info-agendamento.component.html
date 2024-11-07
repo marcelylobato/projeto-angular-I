@@ -12,3 +12,30 @@
 <button>Cancelar</button>
 <button>Ir para pagamento</button>
 
+
+<table class="agendamentos">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Data</th>
+      <th>Serviço</th>
+      <th>Horário</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <tr *ngFor="let info of nomes">
+      <td>{{ info.id }}</td>
+      <td>{{ info.nome }}</td>
+      <td>{{ info.data  }}</td>
+      <td>{{ info.servico }}</td>
+      <td>{{ info.horario }}</td>
+      <td>R$ {{ info.valor | number:'1.2-2' }}</td>
+    </tr>
+  </tbody>
+  
+</table>
+</div>
