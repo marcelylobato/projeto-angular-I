@@ -14,15 +14,20 @@
       <th>Valor</th>
     </tr>
   </thead>
+
+
   <tbody>
-    <tr *ngFor="let agendamento of agendamentos">
-        <td>{{ agendamento.id }}</td>
-        <td>{{ agendamento.nome }}</td>
-        <td>{{ agendamento.data  }}</td>
-        <td>{{ agendamento.servico }}</td>
-        <td>{{ agendamento.horario }}</td>
-        <td>R$ {{ agendamento.valor | number:'1.2-2' }}</td>
+    <tr *ngFor="let info of nomes">
+      <td>{{ info.id }}</td>
+      <td>{{ info.nome }}</td>
+      <td>{{ info.data  }}</td>
+      <td>{{ info.servico }}</td>
+      <td>{{ info.horario }}</td>
+      <td>R$ {{ info.valor | number:'1.2-2' }}</td>
     </tr>
   </tbody>
+  
 </table>
 </div>
+
+
