@@ -8,6 +8,8 @@ import { BtnConfirmaPagamentoComponent } from './components/btn-confirma-pagamen
 import { InfoAgendamentoComponent } from './components/info-agendamento/info-agendamento.component';
 import { TelaDeLoginComponent } from './components/tela-de-login/tela-de-login.component';
 import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-form.component'
+import { PageAgendamentoComponent } from './components/pages/page-agendamento/page-agendamento.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-
     BtnConfirmaPagamentoComponent,
     InfoAgendamentoComponent,
     TelaDeLoginComponent,
-    BtnInputsFormComponent
+    BtnInputsFormComponent,
+    PageAgendamentoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
