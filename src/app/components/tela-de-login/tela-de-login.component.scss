@@ -1,6 +1,7 @@
 @use "../../scss/variables" as var;
 
 div {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 129px;
@@ -47,6 +48,7 @@ input {
         font-size: 20px;
         font-weight: 500;
         line-height: normal;
+        cursor: pointer;
     }
 }
 
