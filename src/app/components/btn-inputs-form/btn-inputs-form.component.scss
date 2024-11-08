@@ -43,5 +43,30 @@
                 outline: 2px solid var.$Rosa-avermelhado;
             }
         }
+
+        .field-btn {
+            display: flex;
+            justify-content: center;
+            border: none;
+            padding-top: 1rem;
+        }
+
+        #btn-submit {
+        width: 20%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: var.$Rosa-avermelhado;
+        color: var.$Branco;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        cursor: pointer;
+        
+            &:hover {
+                background-color: var.$Branco;
+                color: var.$Rosa-avermelhado;
+                transition: 600ms;
+            }
+        }
     }
 }
