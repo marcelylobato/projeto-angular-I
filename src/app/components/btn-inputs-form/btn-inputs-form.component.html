@@ -1,6 +1,14 @@
 
 <section class="section-form">  
 
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" method="get" id="form-select">
+        
+        <!-- Input de seleção de serviços -->
+        <fieldset class="style-forms">         
+            <label for="service"> Selecione qual serviço deseja contratar </label>
+            <select type="select" id="service" formControlName="service">
+
+
     <h2>Agende seu atendimento</h2>
 
     <form action="" method="get" id="form-select">
@@ -9,6 +17,7 @@
         <fieldset class="style-forms">         
             <label for="service"> Serviço: </label>
             <select type="select" id="service">
+
                 <option value="corte" selected>Corte de cabelo - R$50,00</option>
                 <option value="coloracao">Coloração e Mechas - R$150,00</option>
                 <option value="manicure-pedicure">Manicure e Pedicure - R$40,00</option>
@@ -21,27 +30,48 @@
         
         <!-- Input de seleção de data para o atendimento -->
         <fieldset class="style-forms">
+
+            <label for="data"> Selecione o melhor dia para atendimento </label>
+            <input type="date" id="data" formControlName="date">
+
             <label for="data"> Data: </label>
             <input type="date" id="data">
+
         </fieldset>
         
         <!-- Input de seleção para escolher o horario do atendimento -->
         <fieldset class="style-forms">
+
+            <label for="hour"> Selecione o melhor horário </label>
+            <input type="time" id="hour" formControlName="hour" min="08:00" max="18:00" step="1800">
+
             <label for="hour"> Hora: </label>
             <input type="time" id="hour" min="08:00" max="18:00" step="1800">
+
         </fieldset>
         
         <!-- Input para escolher qual profissional irá realizar o atendimento -->
         <fieldset class="style-forms">
+
+            <label for="professional"> Selecione o profissional de sua preferência </label>
+            <select type="select" id="professional" formControlName="professional">
+
             <label for="professional"> Profissional: </label>
             <select type="select" id="professional">
+
                 <option value="cezaniltom"> Cezaniltom </option>
                 <option value="daniel"> Daniel </option>
                 <option value="felipe"> Felipe </option>
-                <option value="marcely" selected> Marcely </option>
+                <option value="marcely"> Marcely </option>
                 <option value="natalia"> Natalia </option>
             </select>
         </fieldset>
+
+
+        <fieldset class="field-btn">
+            <button type="submit" id="btn-submit">Enviar</button>
+        </fieldset>
+
 
     </form>
 

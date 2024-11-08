@@ -20,15 +20,66 @@
     }
 
     #form-select {
+
+        width: 60%;
+        height: 28rem;
+
         display: flex;
         justify-content: center;
+        padding: 0.6rem;
+        border-radius: 2rem;
+
+
         align-items: center;
         gap: .5rem;
         border-radius: 5px;
+
         .style-forms {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            padding: 0.8rem;
+            margin: 12px 0;
+            border: none;
+            border-radius: 1rem;
+            background-color: var.$Branco;
+            color: var.$Rosa-avermelhado;
+
+            input, select {            
+                display: flex;
+                width: 200px;
+                height: 40px;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            input:focus, select:focus{
+                outline: 2px solid var.$Rosa-avermelhado;
+            }
+        }
+
+        .field-btn {
+            display: flex;
+            justify-content: center;
+            border: none;
+            padding-top: 1rem;
+        }
+
+        #btn-submit {
+        width: 20%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: var.$Rosa-avermelhado;
+        color: var.$Branco;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        cursor: pointer;
+        
+            &:hover {
+                background-color: var.$Branco;
+
             gap: 0.5rem;
             padding: 1rem;
             margin-bottom: 10px;
@@ -40,8 +91,9 @@
             
             input, select {
                 font-size: 1rem;
+
                 color: var.$Rosa-avermelhado;
-                border: 1px solid var.$Rosa-avermelhado;
+                transition: 600ms;
             }
 
             input[type="date"]::-webkit-calendar-picker-indicator,
@@ -60,6 +112,9 @@
             cursor: pointer;
         }
     }
+
+}
+
 
     .btn-confirma-agendamento {
         border: none;
