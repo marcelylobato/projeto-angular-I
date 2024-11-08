@@ -2,39 +2,80 @@
 
 .section-form {
     color: var.$Branco;
-    width: 100vw;
-    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: auto;
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
 
     #form-select {
-        width: 50%;
-        height: 70%;
         display: flex;
-        background-color: var.$Azul-escuro;
-        flex-direction: column;
         justify-content: center;
-        padding: 1rem;
-        border-radius: 2rem;
-
+        align-items: center;
+        gap: .5rem;
+        border-radius: 5px;
         .style-forms {
             display: flex;
             justify-content: space-between;
-            padding: 1.2rem;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
             margin-bottom: 10px;
             border: none;
-            border-radius: 1rem;
-            background-color: var.$Branco;
-            color: var.$Rosa-avermelhado;
-            border: 0.1em solid var.$Rosa-avermelhado;
-
+            border-radius: 5px;
+            background-color: var.$Rosa-avermelhado-opaco;
+            color: var.$Branco;
+            height: 50px;
+            
             input, select {
+                font-size: 1rem;
                 color: var.$Rosa-avermelhado;
                 border: 1px solid var.$Rosa-avermelhado;
             }
+
+            input[type="date"]::-webkit-calendar-picker-indicator,
+            input[type="time"]::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+                cursor: pointer;
+            }
+
         }
+        #service, #hour, #data, #professional {
+            background-color: var.$Rosa-avermelhado;
+            color: var.$Branco;
+            border: 1px solid var.$Branco;
+            border-radius: 5px;
+            padding: 0.25rem;
+            cursor: pointer;
+        }
+    }
+
+    .btn-confirma-agendamento {
+        border: none;
+        padding: .5rem 1.5rem;
+        border-radius: 5px;
+        background-color: var.$Rosa-avermelhado;
+        color: var.$Branco;
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .7;
+        };
     }
 }
