@@ -1,14 +1,39 @@
-<h2>Confirmação de Agendamento</h2>
-<span>Verifique as informações do agendamento.</span>
-
-<div>
-   <p>Data:</p>
-   <p>Horário:</p>
-   <p>Serviço:</p>
-   <p>Profissional: </p>
-   <p>Valor: </p>
+<div class="agendamento">
+  <h2>Confirmação de Agendamento</h2>
+  <span>Verifique as informações do agendamento.</span>
+  
+  <div>
+    <p>Data:</p>
+    <p>Horário:</p>
+    <p>Serviço:</p>
+    <p>Profissional:</p>
+    <p>Valor:</p>
+  </div>
+  
+  <button>Cancelar</button>
+  <button>Ir para pagamento</button>
+  
+  <table class="agendamentos">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Data</th>
+        <th>Serviço</th>
+        <th>Horário</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let info of nomes">
+        <td>{{ info.id }}</td>
+        <td>{{ info.nome }}</td>
+        <td>{{ info.data }}</td>
+        <td>{{ info.servico }}</td>
+        <td>{{ info.horario }}</td>
+        <td>R$ {{ info.valor | number : "1.2-2" }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<button>Cancelar</button>
-<button>Ir para pagamento</button>
-

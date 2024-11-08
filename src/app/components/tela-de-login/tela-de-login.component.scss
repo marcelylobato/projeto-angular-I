@@ -1,68 +1,73 @@
 @use "../../scss/variables" as var;
 
 div {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 129px;
     padding: 40px 0px;
     background: url(../../../assets/background_tela-de-login.jpeg) no-repeat center;
     background-size: cover;
-}
 
-h1 {
-    color: var.$Branco;
-    font-size: 48px;
-    text-align: center;
-    font-variant: small-caps;
-}
-
-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-input {
-    width: 750px;
-    height: 57px;
-    border-radius: 10px;
-    padding: 15px;
-    border: none;
-    outline-style: none;
-    
-    &.inputs {
-        color: var.$Branco;
-        background: rgba(255, 255, 255, 0.10);
-        opacity: 100%;
-        
-        &::placeholder {
+    header {
+        h1 {
             color: var.$Branco;
+            font-size: 48px;
+            text-align: center;
+            font-variant: small-caps;
         }
     }
 
-    &.botao {
-        background-color: var.$Rosa-avermelhado;
-        color: var.$Branco;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: normal;
+    main {
+        form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            input {
+                width: 750px;
+                height: 57px;
+                border-radius: 10px;
+                padding: 15px;
+                border: none;
+                outline-style: none;
+                
+                &.inputs {
+                    color: var.$Branco;
+                    background: rgba(255, 255, 255, 0.10);
+                    opacity: 100%;
+
+                    &::placeholder {
+                        color: var.$Branco;
+                    }
+                }
+
+                &.botao {
+                    background-color: var.$Rosa-avermelhado;
+                    color: var.$Branco;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
     }
-}
 
-footer {
-    display: flex;
-    justify-content: center;
-    gap: 110px;
+    footer {
+        display: flex;
+        justify-content: center;
+        gap: 110px;
 
-    p {
-        color: var.$Branco;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 29.05px;
-        
-        a {
-            color: inherit;
+        p {
+            color: var.$Branco;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 29.05px;
+
+            a {
+                color: inherit;
+            }
         }
     }
 }
