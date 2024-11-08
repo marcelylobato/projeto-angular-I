@@ -1,2 +1,32 @@
-@use "../../scss/variables";
+@use "../../scss/variables" as var;
 
+.card-agendamento {
+    width: 100%; 
+    max-width: 1200px;
+    margin: 1.5rem auto; 
+    color: var.$Branco;
+    background-color: var.$Branco-Bg-Opaco;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center; 
+}
+
+.agendamentos {
+    border-collapse: collapse; 
+    width: 100%; 
+    max-width: 50rem; 
+    margin: 0 auto; 
+}
+
+th, td {
+    padding: 1rem; 
+    text-align: left; 
+    border-bottom: 0.0625rem solid var.$Cinza; 
+}
+
+th {
+    color: var.$Rosa-avermelhado; 
+}

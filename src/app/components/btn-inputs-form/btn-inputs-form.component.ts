@@ -10,7 +10,6 @@ export class BtnInputsFormComponent {
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    // Utilizando o Reactive Form
     this.form = this.fb.group({
       service: ['corte', Validators.required],
       date: ['', Validators.required],
@@ -19,7 +18,6 @@ export class BtnInputsFormComponent {
     });
   }
 
-  // Função para o envio do formulário
   onSubmit(): void {
     if (this.form.valid) {
       const formData = this.form.value;
