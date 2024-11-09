@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class BtnInputsFormComponent {
   form: FormGroup;
+  agendamento = {
+    servico: "",
+    data: "",
+    hora: "",
+    profissional: "",
+  }
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -18,12 +24,21 @@ export class BtnInputsFormComponent {
     });
   }
 
+  @Output() enviaInfosAgendamento = new EventEmitter<any>();
+
   onSubmit(): void {
     if (this.form.valid) {
+      this.enviaInfosAgendamento.emit(this.agendamento)
+      console.log(this.agendamento);
+      
+      this.agendamento = {
+        servico: "",
+        data: "",
+        hora: "",
+        profissional: "",
+      }
       const formData = this.form.value;
       localStorage.setItem('formData', JSON.stringify(formData));
-      alert('Dados enviados com sucesso!');
-      this.form.reset();
     } else {
       alert('Por favor, preencha todos os campos.');
     }
