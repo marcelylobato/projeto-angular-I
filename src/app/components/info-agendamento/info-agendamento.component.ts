@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IDadosInfo } from '../../interfaces/dados-info.interface';
 
 @Component({
@@ -9,4 +9,9 @@ import { IDadosInfo } from '../../interfaces/dados-info.interface';
 export class InfoAgendamentoComponent {
   // @Input() nomes: IDadosInfo[] = []; 
   @Input() nomes: any[] = []; 
+
+  @Output() enviaAgendamento = new EventEmitter()
+  abrirModal(id: number) {
+    this.enviaAgendamento.emit(id)
+  }
 }

@@ -6,36 +6,36 @@ import { Component } from '@angular/core';
   styleUrl: './page-agendamento.component.scss',
 })
 export class PageAgendamentoComponent {
-  nomes = [
+
+  agendamentos = [
     {
       id: 1,
-      nome: 'Julia',
-      data: '11/11/2024',
-      servico: 'Corte de Cabelo',
-      horario: '14:00',
-      valor: 70,
+      nome: "Daniel",
+      servico: "Corte",
+      data: "2024-11-09",
+      hora: "17:30",
+      profissional: "Marcely",
+      preco: "50",
     },
     {
       id: 2,
-      nome: 'Maria ',
-      data: '11/11/2024',
-      servico: 'Escova',
-      horario: '15:00',
-      valor: 80,
+      nome: "Marcely",
+      servico: "Maquiagem",
+      data: "2024-11-10",
+      hora: "18:00",
+      profissional: "Natalia",
+      preco: "80",
     },
-    {
-      id: 3,
-      nome: 'Cleide',
-      data: '12/11/2024',
-      servico: 'Tintura',
-      horario: '16:00',
-      valor: 120,
-    },
-  ];
+  ]
 
-  agendamentos = [{}]
+  agendamentoCompleto: any
 
   recebeAgendamentos(agendamento: any) {
     this.agendamentos.push(agendamento)
+  }
+
+  recebeId(id: number)  {
+    this.agendamentoCompleto = this.agendamentos.find(item => item.id === id)
+    return this.agendamentoCompleto
   }
 }

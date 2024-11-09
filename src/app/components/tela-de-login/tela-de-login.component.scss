@@ -49,6 +49,11 @@ div {
                     font-size: 20px;
                     font-weight: 500;
                     line-height: normal;
+                    cursor: pointer;
+                    transition: filter .3s ease;
+                    &:hover {
+                        filter: brightness(1.5);
+                    }
                 }
             }
         }

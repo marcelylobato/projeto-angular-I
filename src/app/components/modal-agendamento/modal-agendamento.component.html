@@ -1,25 +1,33 @@
-<dialog class="modal">
+<dialog class="modal" open>
     <div class="modal__info-container">        
         <h2 class="modal__titulo">Informações sobre o agendamento</h2>
         <div class="modal__info-dado">
-            <span>Nome completo:</span>
-            <span>Daniel</span>
+            <span>Atendimento nº:</span>
+            <span>{{ agendamentoClicado.id }}</span>
         </div>
         <div class="modal__info-dado">
             <span>Nome completo:</span>
-            <span>Daniel</span>
+            <span>{{ agendamentoClicado.nome }}</span>
         </div>
         <div class="modal__info-dado">
-            <span>Nome completo:</span>
-            <span>Daniel</span>
+            <span>Serviço:</span>
+            <span>{{ agendamentoClicado.servico }}</span>
         </div>
         <div class="modal__info-dado">
-            <span>Nome completo:</span>
-            <span>Daniel</span>
+            <span>Data:</span>
+            <span>{{ agendamentoClicado.data }}</span>
         </div>
         <div class="modal__info-dado">
-            <span>Nome completo:</span>
-            <span>Daniel</span>
+            <span>Hora:</span>
+            <span>{{ agendamentoClicado.hora }}</span>
+        </div>
+        <div class="modal__info-dado">
+            <span>Profissional:</span>
+            <span>{{ agendamentoClicado.profissional }}</span>
+        </div>
+        <div class="modal__info-dado">
+            <span>Preço:</span>
+            <span>{{ agendamentoClicado.preco }}</span>
         </div>
     </div>
 </dialog>

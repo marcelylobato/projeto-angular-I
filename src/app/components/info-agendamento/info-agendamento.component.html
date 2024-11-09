@@ -1,11 +1,11 @@
 <div class="card-agendamento">
 
-
   <h2>Informação do Agendamento</h2>
   
   <table class="agendamentos">
     <thead>
       <tr>
+        <th>#</th>
         <th>Serviço</th>
         <th>Data</th>
         <th>Horário</th>
@@ -14,7 +14,8 @@
     </thead>
   
     <tbody>
-      <tr *ngFor="let info of nomes">
+      <tr *ngFor="let info of nomes;" [id]="info.id" class="agendamento" (click)="abrirModal(info.id)">
+        <td>#{{ info.id }}</td>
         <td>{{ info.servico | titlecase }}</td>
         <td>{{ info.data | date : "dd/MM/YYYY" }}</td>
         <td>{{ info.hora }}</td>
