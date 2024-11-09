@@ -7,5 +7,6 @@ import { IDadosInfo } from '../../interfaces/dados-info.interface';
   styleUrl: './info-agendamento.component.scss'
 })
 export class InfoAgendamentoComponent {
-  @Input() nomes: IDadosInfo[] = []; 
+  // @Input() nomes: IDadosInfo[] = []; 
+  @Input() nomes: any[] = []; 
 }

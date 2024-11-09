@@ -7,7 +7,7 @@
         <!-- Input de seleção de serviços -->
         <fieldset class="style-forms">         
             <label for="service"> Serviço: </label>
-            <select id="service" formControlName="service">
+            <select id="service" formControlName="service" [(ngModel)]="agendamento.servico">
                 <option value="corte" selected>Corte de cabelo - R$50,00</option>
                 <option value="coloracao">Coloração e Mechas - R$150,00</option>
                 <option value="manicure-pedicure">Manicure e Pedicure - R$40,00</option>
@@ -21,19 +21,19 @@
         <!-- Input de seleção de data para o atendimento -->
         <fieldset class="style-forms">
             <label for="data"> Data </label>
-            <input type="date" id="data" formControlName="date">
+            <input type="date" id="data" formControlName="date" [(ngModel)]="agendamento.data">
         </fieldset>
         
         <!-- Input de seleção para escolher o horário do atendimento -->
         <fieldset class="style-forms">
             <label for="hour"> Horário </label>
-            <input type="time" id="hour" formControlName="hour" min="08:00" max="18:00" step="1800">
+            <input type="time" id="hour" formControlName="hour" min="08:00" max="18:00" step="1800" [(ngModel)]="agendamento.hora">
         </fieldset>
         
         <!-- Input para escolher qual profissional irá realizar o atendimento -->
         <fieldset class="style-forms">
             <label for="professional"> Profissional </label>
-            <select id="professional" formControlName="professional">
+            <select id="professional" formControlName="professional" [(ngModel)]="agendamento.profissional">
                 <option value="cezaniltom">Cezaniltom</option>
                 <option value="daniel">Daniel</option>
                 <option value="felipe">Felipe</option>
