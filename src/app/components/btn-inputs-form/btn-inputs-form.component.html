@@ -21,7 +21,7 @@
         <!-- Input de seleção de data para o atendimento -->
         <fieldset class="style-forms">
             <label for="data"> Data </label>
-            <input type="date" id="data" formControlName="date" [(ngModel)]="agendamento.data">
+            <input type="date" id="data" [min]="dataHoje" formControlName="date" [(ngModel)]="agendamento.data">
         </fieldset>
         
         <!-- Input de seleção para escolher o horário do atendimento -->

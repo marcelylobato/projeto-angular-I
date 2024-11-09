@@ -9,11 +9,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class BtnInputsFormComponent {
   form: FormGroup;
   agendamento = {
+    id: Math.round(Math.random() * 100000),
     servico: "",
     data: "",
     hora: "",
     profissional: "",
   }
+
+  hoje = new Date();
+  dia = String(this.hoje.getDate()).padStart(2, '0');
+  mes = String(this.hoje.getMonth() + 1).padStart(2, '0');
+  ano = this.hoje.getFullYear();
+  dataHoje = `${this.ano}-${this.mes}-${this.dia}`;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -32,6 +39,7 @@ export class BtnInputsFormComponent {
       console.log(this.agendamento);
       
       this.agendamento = {
+        id: Math.round(Math.random() * 100000),
         servico: "",
         data: "",
         hora: "",

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-agendamento',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ModalAgendamentoComponent {
 
+
+  @Input() agendamentoClicado = {
+    id: 0,
+    nome: "",
+    servico: "",
+    data: "",
+    hora: "",
+    profissional: "",
+    preco: "",
+  }
 }
