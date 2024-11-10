@@ -1,18 +1,55 @@
+@use "../../scss/variables" as var;
+
 .modal {
     margin: auto;
     border: none;
+    min-width: 500px;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: var.$Preto;
+    color: var.$Branco;
+    &::backdrop {
+        background-color: #00000079;
+    }
     &__titulo {
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
     }
     &__info-container {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: .75rem;
+        .pagamento-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__info-dado {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0.5rem;
+        border-radius: 5px;
+        &:nth-child(even) {
+            background-color: var.$Rosa-avermelhado-opaco;
+        }
+    }
+    &__btn-confirma-pagamento {
+        width: fit-content;
+        margin: 1rem auto 0;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        background-color: var.$Rosa-avermelhado;
+        color: var.$Branco;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+    &__spinner {
+        margin: 1rem auto;
     }
 }

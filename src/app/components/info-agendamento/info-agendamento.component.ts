@@ -11,7 +11,9 @@ export class InfoAgendamentoComponent {
   @Input() nomes: any[] = []; 
 
   @Output() enviaAgendamento = new EventEmitter()
+  @Output() modalOpen = new EventEmitter()
   abrirModal(id: number) {
     this.enviaAgendamento.emit(id)
+    this.modalOpen.emit()
   }
 }

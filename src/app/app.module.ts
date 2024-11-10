@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -12,6 +12,14 @@ import { BtnInputsFormComponent } from './components/btn-inputs-form/btn-inputs-
 import { PageAgendamentoComponent } from './components/pages/page-agendamento/page-agendamento.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import localePt from "@angular/common/locales/pt";
+import { registerLocaleData } from '@angular/common';
+import { PrecoPipe } from './pipes/preco.pipe';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
+registerLocaleData(localePt, "pt-BR")
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,14 +30,20 @@ import { HeaderComponent } from './components/header/header.component';
     BtnInputsFormComponent,
     PageAgendamentoComponent,
     HeaderComponent,
+    PrecoPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule 
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'pt-BR'},
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 
 <div class="container">
-    <app-header></app-header>
+    <app-header (usuarioLogado)="recebeNome($event)"></app-header>
     <app-btn-inputs-form (enviaInfosAgendamento)="recebeAgendamentos($event)"></app-btn-inputs-form>
     <app-info-agendamento [nomes]="agendamentos" (enviaAgendamento)="recebeId($event)"></app-info-agendamento>
-    <app-modal-agendamento [agendamentoClicado]="agendamentoCompleto"></app-modal-agendamento>
+    <app-modal-agendamento #modal [agendamentoClicado]="agendamentoCompleto"></app-modal-agendamento>
 </div>

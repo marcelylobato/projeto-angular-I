@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-page-agendamento',
@@ -7,35 +7,24 @@ import { Component } from '@angular/core';
 })
 export class PageAgendamentoComponent {
 
-  agendamentos = [
-    {
-      id: 1,
-      nome: "Daniel",
-      servico: "Corte",
-      data: "2024-11-09",
-      hora: "17:30",
-      profissional: "Marcely",
-      preco: "50",
-    },
-    {
-      id: 2,
-      nome: "Marcely",
-      servico: "Maquiagem",
-      data: "2024-11-10",
-      hora: "18:00",
-      profissional: "Natalia",
-      preco: "80",
-    },
-  ]
+  @ViewChild("modal") modal!: HTMLDialogElement
+
+  agendamentos: any = []
 
   agendamentoCompleto: any
+  nomeDoUsuario: string = ''
 
   recebeAgendamentos(agendamento: any) {
     this.agendamentos.push(agendamento)
   }
 
   recebeId(id: number)  {
-    this.agendamentoCompleto = this.agendamentos.find(item => item.id === id)
+    this.agendamentoCompleto = this.agendamentos.find((item: any) => item.id === id)
+    this.modal.showModal()
     return this.agendamentoCompleto
+  }
+
+  recebeNome(nome: string) {
+    this.nomeDoUsuario = nome
   }
 }
