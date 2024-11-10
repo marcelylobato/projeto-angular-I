@@ -1,33 +1,58 @@
-<dialog class="modal" open>
-    <div class="modal__info-container">        
-        <h2 class="modal__titulo">Informações sobre o agendamento</h2>
-        <div class="modal__info-dado">
-            <span>Atendimento nº:</span>
-            <span>{{ agendamentoClicado.id }}</span>
+<dialog class="modal" #dialog>
+  <div class="modal__info-container">
+    <ng-container *ngIf="!confirma then modal; else confirmado"></ng-container>
+    
+    <ng-template #modal>
+      <h2 class="modal__titulo">Informações sobre o agendamento</h2>
+      <div class="modal__info-dado">
+        <span>Atendimento nº:</span>
+        <span>{{ agendamentoClicado.id }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Cliente:</span>
+        <span>{{ nomeUsuario }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Serviço:</span>
+        <span>{{ agendamentoClicado.servico | titlecase }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Data:</span>
+        <span>{{ agendamentoClicado.data | date : "dd/MM/YYYY" }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Hora:</span>
+        <span>{{ agendamentoClicado.hora }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Profissional:</span>
+        <span>{{ agendamentoClicado.profissional | titlecase }}</span>
+      </div>
+      <div class="modal__info-dado">
+        <span>Preço:</span>
+        <span>{{ agendamentoClicado.servico | preco | currency : "BRL" }}</span>
+      </div>
+      <button class="modal__btn-confirma-pagamento" (click)="confirmaPagamento()">
+        Confirmar pagamento
+      </button>
+    </ng-template>
+
+    <ng-template #confirmado>
+      <ng-container *ngIf="!pagamentoFinalizado; then aguarde; else confirmou"></ng-container>
+      
+      <ng-template #aguarde>
+        <mat-spinner class="modal__spinner"></mat-spinner>
+        <h2 class="modal__titulo">Aguarde...</h2>
+      </ng-template>
+      
+      <ng-template #confirmou>
+        <div class="pagamento-container" *ngIf="confirma">
+          <h2 class="modal__titulo"> Pagamento confirmado!</h2>
+          <button class="modal__btn-confirma-pagamento" (click)="close()">Sair</button>
         </div>
-        <div class="modal__info-dado">
-            <span>Nome completo:</span>
-            <span>{{ agendamentoClicado.nome }}</span>
-        </div>
-        <div class="modal__info-dado">
-            <span>Serviço:</span>
-            <span>{{ agendamentoClicado.servico }}</span>
-        </div>
-        <div class="modal__info-dado">
-            <span>Data:</span>
-            <span>{{ agendamentoClicado.data }}</span>
-        </div>
-        <div class="modal__info-dado">
-            <span>Hora:</span>
-            <span>{{ agendamentoClicado.hora }}</span>
-        </div>
-        <div class="modal__info-dado">
-            <span>Profissional:</span>
-            <span>{{ agendamentoClicado.profissional }}</span>
-        </div>
-        <div class="modal__info-dado">
-            <span>Preço:</span>
-            <span>{{ agendamentoClicado.preco }}</span>
-        </div>
-    </div>
+      </ng-template>
+      
+    </ng-template>
+
+  </div>
 </dialog>

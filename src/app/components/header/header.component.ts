@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NomeUsuarioService } from '../../services/nome-usuario.service';
 
 @Component({
@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(private readonly userService: NomeUsuarioService) {}
 
+  @Output() usuarioLogado = new EventEmitter<string>()
   ngOnInit(): void {
     this.user = this.userService.obterUsuario();
+    this.usuarioLogado.emit(this.user)
   }
 }
