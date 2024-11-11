@@ -188,8 +188,3 @@ Esse projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e contri
 
 
 
-nd testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
