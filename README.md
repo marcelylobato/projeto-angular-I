@@ -147,8 +147,8 @@ FAL
 
 ## 📝 Observações e Melhorias Futuras
 - Implementação de autenticação com backend para maior segurança.
-Otimização para dispositivos móveis.
-Integração com banco de dados para persistência dos agendamentos.
+- Otimização para dispositivos móveis.
+- Integração com banco de dados para persistência dos agendamentos.
 
 ## 💪 Como contribuir para o projeto
 
