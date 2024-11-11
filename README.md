@@ -151,9 +151,9 @@ FAL
 - Integração com banco de dados para persistência dos agendamentos.
 - Criação uma interface onde o usuário possa selecionar o serviço desejado.
 - Implementar uma funcionalidade que permita ao usuário selecionar um profissional para o serviço escolhido.
-- Responsabilidade.
-- Inclui um botão "X" nas janelas modais, permitindo que o usuário feche a janela facilmente.
--  Implementação funcionalidade que permite ao usuário simular pagamentos com diferentes métodos, como cartão de crédito, Pix e boleto.
+- Responsividade.
+-  Criação de um botão "X" nas janelas modais, permitindo que o usuário feche a janela facilmente.
+- Implementação funcionalidade que permite ao usuário simular pagamentos com diferentes métodos, como cartão de crédito, Pix e boleto.
 - Implementação uma ordenação para exibir os agendamentos de forma cronológica. Isso garantirá que os compromissos mais futuros sejam definidos como prime
 - SEO (Otimização de mecanismos de busca)
 
